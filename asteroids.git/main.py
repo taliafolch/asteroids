@@ -32,10 +32,17 @@ def init():
     global asteroidCount, asteroids, levelData, tries
     levelData = df.iloc[level]
     player.reset((levelData['PlayerX'], levelData['PlayerY']))
+<<<<<<< HEAD
     asteroids.empty()s
     asteroidCount = levelData['AsteroidCount']
     for i in range(asteroidCount):
         asteroids.add(Asteroid((random.randint(50, width - 50), random.randint(50, height - 50)), random.randint(15,60)))
+=======
+    asteroids.empty()
+    asteroidCount = levelData['AsteroidCount']
+    for i in range(asteroidCount):
+        asteroid.add(Asteroid((random.randint(50, width - 50), random.randint(50, height - 50)), random.randint(15,60)))
+>>>>>>> origin/master
     tries = 1
 
 def win():
@@ -44,7 +51,11 @@ def win():
     text_rect = text.get_rect()
     text_rect.center = (width/2, height/2)
     #create bar graph
+<<<<<<< HEAD
     index = np.arange(len(totalTries))
+=======
+    index = np.arrange(len(totalTries))
+>>>>>>> origin/master
     plt.bar(index, totalTries)
     plt.xlabel('Level #', fontsize=15)
     plt.ylabel('# of Tries', fontsize=15)
@@ -70,6 +81,7 @@ def main():
                 sys.exit()
             if event.type == KEYDOWN:
                 if event.key == K_d:
+<<<<<<< HEAD
                     player.speed[0] = 5
                 if event.key == K_a:
                     player.speed[0] = -5
@@ -77,6 +89,15 @@ def main():
                     player.speed[1] = -5
                 if event.key == K_s:
                     player.speed[1] = 5
+=======
+                    player.speed[0] = 10
+                if event.key == K_a:
+                    player.speed[0] = -10
+                if event.key == K_w:
+                    player.speed[1] = -10
+                if event.key == K_s:
+                    player.speed[1] = 10
+>>>>>>> origin/master
             if event.type == KEYUP:
                 if event.key == K_d:
                     player.speed[0] = 0
@@ -99,7 +120,11 @@ def main():
             if level == numLevels:
                 break
             else:
+<<<<<<< HEAD
                 level += 1
+=======
+                level *= 1
+>>>>>>> origin/master
                 init()
         elif gets_hit:
             player.reset((levelData['PlayerX'], levelData['PlayerY']))
@@ -108,4 +133,8 @@ def main():
     win()
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     main()
+=======
+    main()
+>>>>>>> origin/master

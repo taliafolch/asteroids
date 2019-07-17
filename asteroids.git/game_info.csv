@@ -1,4 +1,5 @@
 LevelNum,AsteroidCount,PlayerX,PlayerY
+<<<<<<< HEAD
 
 0,1,-20,200
 1,5,-20,200
@@ -8,3 +9,9 @@ LevelNum,AsteroidCount,PlayerX,PlayerY
 5,0,-20,200
 6,7,-20,200
 7,921,-20,200
+=======
+0,3,-20,200
+1,8,-20,200
+2,12,-20,400
+3,18,0,300
+>>>>>>> origin/master
